@@ -102,7 +102,9 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
     --text-mark:                  var(--red);
     --pre-code:                   var(--dark1);
     --text-highlight-bg:          var(--dark3);
-    --interactive-accent:         var(--bloddish6);
+    --interactive-accent:         var(--yellow59);
+    --interactive-accent-hover:   var(--red);
+    --interactive-hover:          var(--dark0);
     --interactive-before:         var(--dark3);
     --background-modifier-border: var(--dark2);
     --text-accent:                var(--orange);
@@ -111,6 +113,7 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
     --code-block:                 var(--frost1);
     --vim-cursor:                 var(--orange);
     --text-selection:             var(--dark3);
+    --opacity-translucency:       0.9;
 }
 .theme-light
 {
@@ -141,6 +144,7 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
 	--code-block:                 var(--frost1);
 	--vim-cursor:                 var(--orange);
 	--text-selection:             var(--light0);
+    --opacity-translucency: 1;
 }
 
 .theme-dark code[class*="language-"],
@@ -400,6 +404,19 @@ thead
     8px 8px rgba(0,0,0,0.05),
     9px 9px rgba(0,0,0,0.05)
 }
+.theme-light .cm-header-1.cm-header-1,
+.theme-light .markdown-preview-section.markdown-preview-section h1 {
+    text-shadow: 1px 1px rgba(0,0,0,0.02),
+    2px 2px rgba(0,0,0,0.02),
+    3px 3px rgba(0,0,0,0.02),
+    4px 4px rgba(0,0,0,0.02),
+    5px 5px rgba(0,0,0,0.02),
+    6px 6px rgba(0,0,0,0.02),
+    7px 7px rgba(0,0,0,0.02),
+    8px 8px rgba(0,0,0,0.02),
+    9px 9px rgba(0,0,0,0.02)
+}
+
 .markdown-preview-section.markdown-preview-section h1 {
     text-align: center;
 }
@@ -516,67 +533,9 @@ input.task-list-item-checkbox:checked {
     height: 12px;
 }
 
-.markdown-preview-view blockquote {
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.03);
-    padding: 10px 20px;
-    position: relative;
-    box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
-    background-color: rgba(255,255,255,0.01);
-}
-
-.markdown-preview-view blockquote::before {
-    content: "\201C";
-    position: absolute;
-    font-size: 3em;
-    top: 0.3em;
-    left: -0.15em;
-}
 
 
-/* GRAPH VIEW */
-.theme-dark.graph-view.color-circle {
-    color: white;
-}
 
-.theme-dark.graph-view.color-fill-highlight,
-.theme-dark.graph-view.color-line-highlight
-{
-    color: var(--interactive-accent-rgb);
-}
-.graph-view.color-text
-{
-    color: var(--text-a-hover);
-}
-/*
-.graph-view.color-line
-{
-  color: var(--background-modifier-border);
-}
-*/
-.theme-light .graph-view.color-fill
-{
-    color: var(--background-secondary);
-}
-.graph-view.color-fill-highlight {
-    color: var(--interactive-accent);
-}
-.graph-view.color-circle-highlight {
-    color: var(--text-normal);
-}
-
-.theme-dark .graph-view.color-fill-tag {
-    color: var(--groddish);
-  }
-
-.theme-dark .graph-view.color-fill-attachment {
-    color: var(--red);
-}
-
-.theme-dark .graph-view.color-fill-unresolved {
-    color: var(--bloddish6);
-}
-/* END GRAPH VIEW */
 
 /****************************************************************************
     BEGIN - My code! 😀
@@ -631,6 +590,67 @@ a.tag:hover {
 .markdown-preview-view mark {
     background-color: var(--text-mark);
 }
+
+.markdown-preview-view blockquote {
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.03);
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.01);
+}
+
+.markdown-preview-view blockquote::before {
+    content: "\201C";
+    position: absolute;
+    font-size: 3em;
+    top: 0.3em;
+    left: -0.15em;
+}
+
+/* GRAPH VIEW */
+.theme-dark .graph-view.color-fill {
+    color: white;
+}
+
+.theme-dark.graph-view.color-fill-highlight,
+.theme-dark.graph-view.color-line-highlight
+{
+    color: var(--interactive-accent-rgb);
+}
+.graph-view.color-text
+{
+    color: var(--text-a-hover);
+}
+/*
+.graph-view.color-line
+{
+  color: var(--background-modifier-border);
+}
+*/
+.theme-light .graph-view.color-fill
+{
+    color: var(--background-secondary);
+}
+.graph-view.color-fill-highlight {
+    color: var(--interactive-accent);
+}
+.graph-view.color-circle-highlight {
+    color: var(--text-normal);
+}
+
+.theme-dark .graph-view.color-fill-tag {
+    color: var(--yellow);
+  }
+
+.theme-dark .graph-view.color-fill-attachment {
+    color: var(--red);
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+    color: var(--bloddish6);
+}
+/* END GRAPH VIEW */
 
 .status-bar {
     position: absolute;
