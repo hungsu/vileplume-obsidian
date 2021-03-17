@@ -487,14 +487,9 @@ thead
     background-color: var(--interactive-before);
 }
 
-.checkbox-container:after
-{
-    background-color: var(--background-secondary-alt);
-}
-
 .mod-cta
 {
-    color: var(--background-secondary-alt) !important;
+    /* color: var(--background-secondary-alt) !important; */
     font-weight: 600 !important;
 }
 
