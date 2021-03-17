@@ -3,7 +3,7 @@
 # Vileplume for Obsidian
 A poisonous dark theme for [Obsidian](https://obsidian.md/), a tool for connected note taking.
 
-![Screenshot of Vileplume for Obsidian](https://raw.githubusercontent.com/hungsu/vileplume-obsidian/main/Vileplume%20for%20Obsidian%20screenshot.png)
+![Screenshot of Vileplume for Obsidian](https://raw.githubusercontent.com/hungsu/vileplume-obsidian/main/Vileplume.png)
 
 ## Installation instructions
 
