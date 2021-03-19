@@ -280,12 +280,6 @@ thead
     color: var(--frost2) !important;
 }
 
-.cm-hashtag,
-.search-result-file-matched-text
-{
-    color: var(--frost2) !important;
-}
-
 .markdown-preview-section pre code,
 .markdown-preview-section code
 {
