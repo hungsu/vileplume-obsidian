@@ -64,13 +64,14 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
     --frost2: #81a1c1;
     --frost3: #5e81ac;
 
-    --bloddish: hsl(203, 27%, 48%);
-    --bloddish6: hsl(204, 24%, 64%);
+    --bloddish48: hsl(203, 27%, 48%);
+    --bloddish64: hsl(204, 24%, 64%);
 
     --red:    hsl(352, 56%, 62%);
     --orange: #d08770;
+    --yellow54: hsl(30, 55%, 54%);
     --yellow59: hsl(24, 33%, 59%);
-    --yellow: hsl(27, 49%, 68%);
+    --yellow:   hsl(27, 49%, 68%);
     --yellow75: hsl(19, 38%, 75%);
     --green:  #a3be8c;
     --groddish: hsl(107, 39%, 43%);
@@ -95,7 +96,8 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
     --text-title-h2:              var(--orange);
     --text-title-h3:              var(--yellow);
     --text-title-h4:              var(--green);
-    --text-title-h5:              var(--purple);
+    --text-title-h5:              var(--bloddish64);
+    --text-title-h6:              var(--purple);
     --text-link:                  var(--frost0);
     --text-a:                     var(--yellow);
     --text-a-hover:               var(--yellow);
@@ -112,7 +114,7 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
     --inline-code:                var(--frost1);
     --code-block:                 var(--frost1);
     --vim-cursor:                 var(--orange);
-    --text-selection:             var(--dark3);
+    --text-selection:             var(--red);
     --opacity-translucency:       0.9;
 }
 .theme-light
@@ -457,12 +459,17 @@ thead
 }
 
 .cm-header-5,
-.cm-header-6,
-.markdown-preview-section h5,
-.markdown-preview-section h6
+.markdown-preview-section h5
 {
     font-size: 18px !important;
     color: var(--text-title-h5) !important;
+}
+
+.cm-header-6,
+.markdown-preview-section h6
+{
+    font-size: 18px !important;
+    color: var(--text-title-h6) !important;
 }
 
 .suggestion-item.is-selected
@@ -515,13 +522,6 @@ input.task-list-item-checkbox:checked {
     fill: var(--frost3) !important;
 }
 
-.heading-collapse-indicator svg {
-    background: url('https://cdn.discordapp.com/attachments/560318304472793114/808721915627307058/lets_go_arrow.png');
-    background-size: contain;
-    width:12px;
-    height: 12px;
-}
-
 
 
 
@@ -529,6 +529,13 @@ input.task-list-item-checkbox:checked {
 /****************************************************************************
     BEGIN - My code! 😀
 ****************************************************************************/
+
+.heading-collapse-indicator svg {
+    background: url('https://cdn.discordapp.com/attachments/560318304472793114/808721915627307058/lets_go_arrow.png');
+    background-size: contain;
+    width:12px;
+    height: 12px;
+}
 
 ::-webkit-scrollbar {
     background-color: transparent;
@@ -637,7 +644,7 @@ a.tag:hover {
 }
 
 .theme-dark .graph-view.color-fill-unresolved {
-    color: var(--bloddish6);
+    color: var(--bloddish64);
 }
 /* END GRAPH VIEW */
 
