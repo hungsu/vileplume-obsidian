@@ -177,7 +177,7 @@ strong
 a,
 .cm-hmd-internal-link
 {
-    color: var(--text-a) !important;
+    color: var(--text-a);
     text-decoration: none !important;
 }
 
@@ -185,7 +185,7 @@ a:hover,
 .cm-hmd-internal-link:hover,
 .cm-url
 {
-    color: var(--text-a-hover) !important;
+    color: var(--text-a-hover);
     text-decoration: underline !important;
 }
 
@@ -562,22 +562,33 @@ input.task-list-item-checkbox:checked {
     justify-content: space-between;
 }
 
-a.tag {
-    white-space: nowrap;
+.cm-hashtag {
+    --tag-color: white;
     background-color: var(--yellow59);
-    color: white !important;
-    padding: 0.2em 0.4em;
-    border-radius: 1em;
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
     border: 1px solid rgba(255,255,255,0.3);
-    box-shadow: -10px -10px 30px rgba(255,255,255,0.05), 10px 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+}
+
+.cm-hashtag-begin {
+    border-radius: 1em 0 0;
+}
+.cm-hashtag-end {
+    border-radius: 0 0 1em
+}
+
+a.tag {
+    --tag-color: white;
+    background-color: var(--yellow59);
+    box-shadow: inset 0px 0px 1px rgba(255,255,255,0.5), 10px 10px 30px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    display: inline-block;
 }
 
 a.tag:hover {
-    text-decoration: none !important;
+    color: var(--tag-color);
     background-color: var(--yellow);
-    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+    text-decoration: none !important;
 }
 
 .dropdown {
