@@ -84,6 +84,15 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
     --font-monospace: 'Hack Nerd Font', 'Source Code Pro', monospace;
 }
 
+body {
+    --h1-size: 4.6em;
+    --h2-size: 2.07em;
+    --h3-size: 1.73em;
+    --h4-size: 1.44em;
+    --h5-size: 1.2em;
+    --h6-size: 1.2em;
+}
+
 .theme-dark
 {
     --background-primary:         var(--dark0);
@@ -443,14 +452,9 @@ settings:
 
 */
 
-body {
-    --h1-size: 3em
-}
-
 .cm-header-1.cm-header-1,
 .markdown-preview-section.markdown-preview-section h1
 {
-    font-size: 5em;
     color: var(--text-title-h1);
     line-height: 0.75;
 }
@@ -458,35 +462,30 @@ body {
 .cm-header-2,
 .markdown-preview-section h2
 {
-    font-size: 26px;
     color: var(--text-title-h2);
 }
 
 .cm-header-3,
 .markdown-preview-section h3
 {
-    font-size: 22px;
     color: var(--text-title-h3);
 }
 
 .cm-header-4,
 .markdown-preview-section h4
 {
-    font-size: 20px;
     color: var(--text-title-h4);
 }
 
 .cm-header-5,
 .markdown-preview-section h5
 {
-    font-size: 18px;
     color: var(--text-title-h5);
 }
 
 .cm-header-6,
 .markdown-preview-section h6
 {
-    font-size: 18px;
     color: var(--text-title-h6);
 }
 
